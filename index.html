@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Heliá: energía solar para casas y pequeños negocios</title>
+<meta name="description" content="Aprende cuántos paneles solares necesitas, cuánto puedes ahorrar en tu factura de energía y cómo mantenerlos.">
+<link rel="shortcut icon" href="imgs/logo.svg" type="image/x-icon">
+<link rel="stylesheet" href="libs/estilos.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><i></i>Heliá</a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#calculadora">Calculadora</a></li>
+        <li><a href="#mantenimiento">Mantenimiento</a></li>
+        <li><a href="#video">Como funciona</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <!-- CAMBIA AQUÍ TU NOMBRE COMPLETO (también en el pie de página) -->
+        <span class="author">Proyecto de: Julian Cifuentes</span>
+        <h1 id="titulo">Energía solar, explicada con claridad</h1>
+        <p class="mute">Muchas personas quieren usar paneles solares, pero no saben cuánto pueden ahorrar ni cuántos necesitan. Heliá te da una estimación sencilla y te enseña por qué vale la pena.</p>
+        <a class="btn" href="#calculadora">Calcular mi ahorro</a>
+      </div>
+      <img class="pic" width="300" height="200" alt="Ilustración de un panel solar inclinado bajo el sol"
+        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23eef3ec'/%3E%3Ccircle cx='240' cy='45' r='24' fill='%23f2c75c'/%3E%3Cpolygon points='60,150 240,150 270,90 90,90' fill='%237fb7a3'/%3E%3Cg stroke='%23a9c4b8' stroke-width='2'%3E%3Cline x1='120' y1='90' x2='90' y2='150'/%3E%3Cline x1='150' y1='90' x2='120' y2='150'/%3E%3Cline x1='180' y1='90' x2='150' y2='150'/%3E%3Cline x1='210' y1='90' x2='180' y2='150'/%3E%3Cline x1='240' y1='90' x2='210' y2='150'/%3E%3Cline x1='80' y1='110' x2='260' y2='110'/%3E%3Cline x1='70' y1='130' x2='250' y2='130'/%3E%3C/g%3E%3Crect x='146' y='150' width='8' height='30' fill='%23b9cfc4'/%3E%3Crect x='20' y='180' width='260' height='4' fill='%23c9cdc4'/%3E%3C/svg%3E">
+    </div>
+  </section>
+
+  <section class="alt" id="beneficios" aria-labelledby="t-ben">
+    <div class="wrap">
+      <span class="kicker">Sección 1</span>
+      <h2 id="t-ben">Por qué usar paneles solares</h2>
+      <p class="mute">La energía solar no es solo una forma de pagar menos. Es una decisión que también cuida el entorno.</p>
+      <div class="grid">
+        <article class="card"><span class="num">01</span><h3>Ahorro en la factura</h3><p>Produces parte de tu energía y compras menos a la red, algo clave para hogares y negocios pequeños.</p></article>
+        <article class="card"><span class="num">02</span><h3>Energía limpia</h3><p>Los paneles generan electricidad sin emitir gases durante su funcionamiento.</p></article>
+        <article class="card"><span class="num">03</span><h3>Larga duración</h3><p>Con buen cuidado, los paneles pueden funcionar por décadas con muy poco mantenimiento.</p></article>
+        <article class="card"><span class="num">04</span><h3>Más independencia</h3><p>Dependes menos de los aumentos de tarifa y valoras mejor tu propio consumo.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="calculadora" aria-labelledby="t-cal">
+    <div class="wrap">
+      <span class="kicker">Sección 2</span>
+      <h2 id="t-cal">Calculadora de paneles y ahorro</h2>
+      <p class="mute">Ingresa dos datos de tu factura y obtén una estimación inicial.</p>
+      <div class="calc">
+        <form id="calc">
+          <label for="factura">Valor aproximado de tu factura mensual (COP)</label>
+          <input id="factura" type="number" min="1" step="1000" placeholder="Ej: 250000" required>
+          <label for="kwh">Consumo mensual (kWh)</label>
+          <input id="kwh" type="number" min="1" placeholder="Ej: 220" required>
+          <button class="btn" type="submit">Calcular</button>
+        </form>
+        <div class="result" aria-live="polite">
+          <p>Paneles estimados</p>
+          <strong id="r-paneles">—</strong>
+          <p>Ahorro mensual aproximado</p>
+          <strong id="r-ahorro">—</strong>
+          <p>&nbsp;</p>
+          <small>Estimación educativa: paneles de 450 W, unas 4,5 horas de sol al día y un 80 % de eficiencia. Pide siempre una visita técnica antes de instalar.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="mantenimiento" aria-labelledby="t-man">
+    <div class="wrap two">
+      <img class="pic" width="300" height="200" alt="Ilustración de una casa con paneles solares en el techo"
+        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23eef3ec'/%3E%3Ccircle cx='60' cy='45' r='22' fill='%23f2c75c'/%3E%3Crect x='80' y='105' width='140' height='75' fill='%23f6f1e4'/%3E%3Cpolygon points='65,105 150,45 235,105' fill='%23b9cfc4'/%3E%3Cpolygon points='150,62 190,90 176,100 140,74' fill='%237fb7a3'/%3E%3Cpolygon points='128,76 160,98 148,106 118,84' fill='%237fb7a3'/%3E%3Crect x='138' y='130' width='24' height='50' fill='%23e6d3aa'/%3E%3Crect x='92' y='122' width='28' height='24' fill='%23c9dde3'/%3E%3Crect x='180' y='122' width='28' height='24' fill='%23c9dde3'/%3E%3Crect x='20' y='180' width='260' height='4' fill='%23c9cdc4'/%3E%3C/svg%3E">
+      <div>
+        <span class="kicker">Sección 3</span>
+        <h2 id="t-man">Cómo mantener tus paneles</h2>
+        <details open><summary>Límpialos con regularidad</summary><p>Retira polvo y hojas con agua y un paño suave, preferiblemente en la mañana o al atardecer.</p></details>
+        <details><summary>Evita sombras</summary><p>Revisa que árboles o construcciones nuevas no tapen los paneles, porque la sombra reduce la producción.</p></details>
+        <details><summary>Haz una revisión técnica</summary><p>Una vez al año pide revisar cables, conexiones y el inversor a una persona calificada.</p></details>
+        <details><summary>Nunca limpies con productos agresivos</summary><p>Los químicos fuertes o las esponjas ásperas pueden rayar el vidrio de los paneles.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="video" aria-labelledby="t-vid">
+    <div class="wrap">
+      <span class="kicker">Multimedia</span>
+      <h2 id="t-vid">Mira cómo funciona un panel solar</h2>
+      <p class="mute">Un video explicativo para entender cómo la luz del sol se convierte en electricidad.</p>
+      <div class="video">
+        <iframe src="https://www.youtube-nocookie.com/embed/q5bMAz4NK0c" title="Video: cómo funciona un panel solar fotovoltaico" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <!-- <p class="mute"><a href="https://www.youtube.com/watch?v=q5bMAz4NK0c">Ver el video directamente en YouTube</a></p> -->
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Julian Cifuentes</strong></p>
+    <p>Heliá busca educar y motivar a más personas a conocer y usar energías renovables.</p>
+  </div>
+</footer>
+
+<script>
+  const $=id=>document.getElementById(id);
+  $("calc").addEventListener("submit",e=>{
+    e.preventDefault();
+    const factura=+$("factura").value,kwh=+$("kwh").value;
+    const porPanel=48.6; /* kWh/mes: 0,45 kW x 4,5 h x 30 días x 0,8 */
+    const paneles=Math.ceil(kwh/porPanel);
+    const cobertura=Math.min(1,paneles*porPanel/kwh);
+    $("r-paneles").textContent=paneles+(paneles===1?" panel":" paneles");
+    $("r-ahorro").textContent="$ "+Math.round(factura*cobertura*0.9).toLocaleString("es-CO");
+  });
+</script>
+</body>
+</html>
